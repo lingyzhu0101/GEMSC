@@ -1,5 +1,9 @@
 # GEMSC
 Enlightening low-light images with learnable guidance jointly with enriched features
 
-Python==3.6
-torch-0.4.0-cp36-cp36m-manylinux1_x86_64.whl
+# Server 
+2080
+
+# conda env list
+conda create -n GEMSC_torch0.4 python=3.6
+pip install torch==0.4.0
