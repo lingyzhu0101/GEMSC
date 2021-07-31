@@ -1,5 +1,5 @@
 # GEMSC
-Enlightening low-light images with learnable guidance jointly with enriched features
+Enlightening Low-Light Images with DynamicGuidance for Context Enrichment
 
 # env requirement
 pip install torch==0.4.0
