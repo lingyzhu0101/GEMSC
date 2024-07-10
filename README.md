@@ -35,37 +35,29 @@ class="center">
 
 ## Public Dataset
 
-We use the RGB image based on the [LOL-v]() dataset.
+We follow the guidance from [CVPR-Semi](https://github.com/flyywh/CVPR-2020-Semi-Low-Light/tree/master)
 
-We use the RGB image based on the [FiveK]() dataset.
+You can obtain the dataset via: [[Dataset Link]](https://pan.baidu.com/s/1MNVwBVZI1ASglJwoZqj8MQ) (extracted code: odwa) [Updated on 25 April, 2022] <br>
+We introduce these collections here: <br>
+a) Our_low: real captured low-light images in LOL for training; <br>
+b) Our_normal: real captured normal-light images in LOL for training; <br>
+c) Our_low_test: real captured low-light images in LOL for testing; <br>
+d) Our_normal_test: real captured normal-light images in LOL for testing; <br>
+e) AVA_good_2: the high-quality images selected from the AVA dataset based on the MOS values; <br>
+f) Low_real_test_2_rs: real low-light images selected from LIME, NPE, VV, DICM, the typical unpaired low-light testing datasets; <br>
+g) Low_degraded: synthetic low-light images in LOL for training; <br>
+h) Normal: synthetic normal-light images in LOL for training; <br>
 
-## Installation
+## Pytorch version <br>
+Only 0.4 and 0.41 currently. <br> If you have to use more advanced versions, which might be constrained to the GPU device types, you might access Wang Hong's github for the idea to replace parts of the dataloader: [[New Dataloader]](https://github.com/hongwang01/RCDNet/tree/master/pytorch1.0%2B/for_syn/src) <br> 
 
-First, install Python 3. We advise you to install Python 3 and PyTorch with Anaconda:
-
-```
-conda create --name py36 python=3.6
-source activate py36
-```
-
-Clone the repo and install the complementary requirements:
-```
-cd $HOME
-pip install -r requirements.txt
-```
 
 ## Example Usage
 ### Train
-Train the model on the corresponding dataset using the command, the training on outdoor subset of SDSD:
-```
-CUDA_VISIBLE_DEVICES=0 python main.py
-```
+see the train command in train.sh
 
 ### Test
-Test the epoch xx on the corresponding dataset using the command, the testing on outdoor subset of SDSD:
-```
-CUDA_VISIBLE_DEVICES=0 python main.py --mode test --version Video_outdoor_abcd --use_tensorboard True --pretrained_model xx
-```
+see the test command in test.sh
 
 We adopt PSNR and SSIM as comparison criteria to evaluate the spatial quality of enhanced video frames, which are based upon the implementations with MATLAB (R2018b).
 
@@ -74,7 +66,6 @@ We adopt PSNR and SSIM as comparison criteria to evaluate the spatial quality of
 - Lingyu Zhu: lingyzhu-c@my.cityu.edu.hk
 
 ## Citation
-
 
 
 If you find our work helpful, please consider citing:
