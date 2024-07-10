@@ -28,7 +28,7 @@ class="center">
 
 ## Quantitative Performance
 <p align="left">
-<img src="src/figures/main_performance_quantitative.png.png" width=80% height=80% 
+<img src="src/figures/main_performance_quantitative.png" width=80% height=80% 
 class="center">
 </p>
 
